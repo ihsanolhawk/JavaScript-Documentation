@@ -1,0 +1,183 @@
+/* Base styles and variables */
+:root {
+  --primary-color: #0A2540;
+  --accent-color: #FFC107;
+  --text-color: #333;
+  --background-color: #F8F9FA;
+  --code-background: #f1f1f1;
+  --border-color: #ddd;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  
+  /* Spacing system based on 8px */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Navigation styles */
+#navbar {
+  position: fixed;
+  width: 300px;
+  height: 100vh;
+  background-color: var(--primary-color);
+  color: white;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+  box-shadow: var(--shadow);
+  z-index: 100;
+}
+
+#navbar header {
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: var(--space-3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-link {
+  padding: var(--space-2);
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.2s ease, padding-left 0.2s ease;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding-left: var(--space-3);
+  border-left: 4px solid var(--accent-color);
+}
+
+/* Main document styles */
+#main-doc {
+  margin-left: 300px;
+  padding: var(--space-4);
+  flex: 1;
+  max-width: 900px;
+}
+
+.main-section {
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.main-section:last-child {
+  border-bottom: none;
+}
+
+.main-section header {
+  font-size: 2rem;
+  margin-bottom: var(--space-3);
+  padding-bottom: var(--space-1);
+  color: var(--primary-color);
+  border-bottom: 3px solid var(--accent-color);
+  display: inline-block;
+}
+
+.main-section p {
+  margin-bottom: var(--space-2);
+}
+
+/* Code blocks */
+code {
+  display: block;
+  background-color: var(--code-background);
+  padding: var(--space-2);
+  margin: var(--space-2) 0;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  white-space: pre-wrap;
+  border-left: 4px solid var(--accent-color);
+  overflow-x: auto;
+}
+
+/* List styles */
+ul, ol {
+  margin: var(--space-2) 0;
+  padding-left: var(--space-3);
+}
+
+li {
+  margin-bottom: var(--space-1);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  #navbar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+  }
+
+  #main-doc {
+    margin-left: 0;
+    padding: var(--space-2);
+  }
+  
+  .nav-link:hover {
+    padding-left: var(--space-2);
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.main-section {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Active link state - using JavaScript would enhance this */
+.nav-link:target {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+}
+
+/* Code inline styling */
+p code {
+  display: inline;
+  padding: 2px 4px;
+  border: none;
+  border-radius: 3px;
+  background-color: var(--code-background);
+}
+
+/* Nested lists styling */
+ul ul {
+  margin-top: var(--space-1);
+}

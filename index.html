@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>JavaScript Documentation</title>
+</head>
+<body>
+  <nav id="navbar">
+    <header>JavaScript Documentation</header>
+    <div class="nav-links">
+      <a href="#Introduction" class="nav-link">Introduction</a>
+      <a href="#What_you_should_already_know" class="nav-link">What you should already know</a>
+      <a href="#JavaScript_and_Java" class="nav-link">JavaScript and Java</a>
+      <a href="#Hello_world" class="nav-link">Hello world</a>
+      <a href="#Variables" class="nav-link">Variables</a>
+      <a href="#Declaring_variables" class="nav-link">Declaring variables</a>
+      <a href="#Variable_scope" class="nav-link">Variable scope</a>
+      <a href="#Global_variables" class="nav-link">Global variables</a>
+      <a href="#Constants" class="nav-link">Constants</a>
+      <a href="#Data_types" class="nav-link">Data types</a>
+    </div>
+  </nav>
+
+  <main id="main-doc">
+    <section class="main-section" id="Introduction">
+      <header>Introduction</header>
+      <p>JavaScript is a cross-platform, object-oriented scripting language. It is a small and lightweight language. Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over them.</p>
+      <p>JavaScript contains a standard library of objects, such as Array, Date, and Math, and a core set of language elements such as operators, control structures, and statements. Core JavaScript can be extended for a variety of purposes by supplementing it with additional objects.</p>
+      <p>JavaScript is a versatile and widely-used programming language that powers the dynamic behavior of most websites and web applications today.</p>
+    </section>
+
+    <section class="main-section" id="What_you_should_already_know">
+      <header>What you should already know</header>
+      <p>This guide assumes you have the following basic background:</p>
+      <ul>
+        <li>A general understanding of the Internet and the World Wide Web (WWW).</li>
+        <li>Good working knowledge of HyperText Markup Language (HTML).</li>
+        <li>Some programming experience. If you are new to programming, try one of the tutorials linked on the main page about JavaScript.</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="JavaScript_and_Java">
+      <header>JavaScript and Java</header>
+      <p>JavaScript and Java are similar in some ways but fundamentally different in others. The JavaScript language resembles Java but does not have Java's static typing and strong type checking. JavaScript follows most Java expression syntax, naming conventions and basic control-flow constructs which was the reason why it was renamed from LiveScript to JavaScript.</p>
+      <p>In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime system based on a small number of data types representing numeric, Boolean, and string values. JavaScript has a prototype-based object model instead of the more common class-based object model. The prototype-based model provides dynamic inheritance; that is, what is inherited can vary for individual objects.</p>
+      <p>JavaScript also supports functions without any special declarative requirements. Functions can be properties of objects, executing as loosely typed methods.</p>
+    </section>
+
+    <section class="main-section" id="Hello_world">
+      <header>Hello world</header>
+      <p>To get started with writing JavaScript, open your editor and try your first "Hello world" example in <code>script.js</code>.</p>
+    </section>
+
+    <section class="main-section" id="Variables">
+      <header>Variables</header>
+      <p>Variables are containers for storing data values. In JavaScript, you use the var, let, or const keywords to declare variables.</p>
+      <p>The concept of variables is foundational to all programming languages. Variables allow us to store and manipulate data in our programs.</p>
+    </section>
+
+    <section class="main-section" id="Declaring_variables">
+      <header>Declaring variables</header>
+      <p>You can declare a variable in three ways:</p>
+      <ul>
+        <li>With the keyword <code>var</code> — can declare local and global variables.</li>
+        <li>With the keyword <code>const</code> — declares a block-scoped constant that cannot be reassigned.</li>
+        <li>With the keyword <code>let</code> — declares a block-scoped variable that can be reassigned.</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="Variable_scope">
+      <header>Variable scope</header>
+      <p>When you declare a variable outside of any function, it is called a global variable, because it is available to any other code in the current document. When you declare a variable within a function, it is called a local variable, because it is available only within that function.</p>
+      <p>JavaScript before ECMAScript 2015 did not have block scope. Variables declared with <code>var</code> inside blocks would still be scoped to the function or global context.</p>
+    </section>
+
+    <section class="main-section" id="Global_variables">
+      <header>Global variables</header>
+      <p>Global variables are properties of the global object. In web pages, the global object is <code>window</code>, so you can set and access global variables using <code>window.variable</code> syntax.</p>
+    </section>
+
+    <section class="main-section" id="Constants">
+      <header>Constants</header>
+      <p>You can create a read-only, named constant with the <code>const</code> keyword. Constants must be initialized at declaration and cannot be reassigned.</p>
+      <p>Object properties, however, can still be modified even if the object is declared with <code>const</code>.</p>
+    </section>
+
+    <section class="main-section" id="Data_types">
+      <header>Data types</header>
+      <p>The latest ECMAScript standard defines seven data types:</p>
+      <ul>
+        <li>Boolean</li>
+        <li>null</li>
+        <li>undefined</li>
+        <li>Number</li>
+        <li>String</li>
+        <li>Symbol (new in ES6)</li>
+        <li>Object</li>
+      </ul>
+      <p>Objects and functions are the fundamental building blocks in the language. Objects are named containers for values, and functions are reusable blocks of code that perform tasks.</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
